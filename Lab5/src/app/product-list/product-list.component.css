@@ -1,0 +1,25 @@
+.container-of-products {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.description {
+  width: 75%;
+}
+
+.buttons-div {
+  display: flex;
+  height: 8%;
+  align-items: center;
+}
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

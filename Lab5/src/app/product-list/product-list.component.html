@@ -1,0 +1,42 @@
+<select id="item-select" #item_category (change)="changeCategory(item_category.value)">
+  <option  *ngFor="let item of category" value="{{ item.category }}">{{item.name}}</option>
+</select>
+
+<div class="container-of-products">
+  <div *ngFor="let product of products" class="product">
+      <h3>
+        <a [title]="product.name + ' details'">
+          {{ product.name }}
+        </a>
+      </h3>
+
+      <div *ngIf="product.img">
+          <img src="assets/{{ product.img }}" alt="{{ product.name }}">
+      </div>
+
+      <p *ngIf="product.description" class="description">
+          <strong>Description:</strong> {{ product.description }}
+      </p>
+      <p *ngIf="product.rating" class="description">
+          <strong>Rating:</strong> {{ product.rating }}
+      </p>
+      <div class="buttons-div">
+          <button type="button" (click)="share(product.link)">
+              Share
+          </button>
+          <button type="button" (click)="likeAdd(product)">
+              like
+          </button>
+          <h4>
+              {{ product.count_of_likes }}
+          </h4>
+      </div>
+
+  </div>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
